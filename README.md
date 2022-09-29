@@ -6,7 +6,7 @@ Thanks for checking out my Hacker Rank Challenges. Below is a table that shows e
 | [🌍 Average Population on Each Continent](#average-population-on-each-continent)| FlOOR, AVG, JOIN, GROUP BY |
 |[💻Employee Information](#employee-information) | ORDER BY, Using multiple conditions in WHERE Clause| 
 |[👩‍⚕️The PADS](#the-pads) | CONCAT, SUBSTR, GROUP BY, ORDER BY |
-|[☁️The Weather Observations Station](#weather-observation-station) | Skills |
+|[☁️The Weather Observations Station](#weather-observation-station) | MOD, DISTINCT, COUNT, LENGTH, LIMIT, ORDER BYSUBST, LEFT, RIGHT |
 
 -------
 ### Average Population on Each Continent
