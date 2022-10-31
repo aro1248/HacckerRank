@@ -54,6 +54,18 @@ WHERE Salary > 2000 AND
       Months < 10 
 ORDER BY Employee_id ASC
 ```
+
+**Question 3:**
+
+We define an employee's total earnings to be their monthly salary x months worked, and the maximum total earnings to be the maximum total earnings for any employee in the Employee table. Write a query to find the maximum total earnings for all employees as well as the total number of employees who have maximum total earnings. Then print these values as 2 space-separated integers.
+
+```sql
+SELECT (Salary * Months) AS MaxSal, COUNT(employee_id)
+FROM Employee
+GROUP BY Months, Salary
+ORDER BY MaxSal Desc
+LIMIT 1
+```
 ------
 ### The PADS 
 The OCCUPATIONS Table is described as Follows: 
@@ -186,9 +198,9 @@ WHERE City NOT LIKE '[aeiou]%'
 ```
 ----
 ### The Blunder
-Samantha was tasked with calculating the average monthly salaries for all employees in the EMPLOYEES table, but did not realize her keyboard's  key was broken until after completing the calculation. She wants your help finding the difference between her miscalculation (using salaries with any zeros removed), and the actual average salary.
+Samantha was tasked with calculating the average monthly salaries for all employees in the EMPLOYEES table, but did not realize her keyboard's 0 key was broken until after completing the calculation. She wants your help finding the difference between her miscalculation (using salaries with any zeros removed), and the actual average salary.
 
-**Write a query calculating the amount of error (i.e.:  average monthly salaries), and round it up to the next integer.**
+**Write a query calculating the amount of error (i.e.: actual - miscalculated average monthly salaries), and round it up to the next integer.**
 
 The EMPLOYEES table is described as follows:
 
