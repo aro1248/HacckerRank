@@ -7,6 +7,7 @@ Thanks for checking out my Hacker Rank Challenges. Below is a table that shows e
 |[💻Employee Information](#employee-information) | ORDER BY, Using multiple conditions in WHERE Clause| 
 |[👩‍⚕️The PADS](#the-pads) | CONCAT, SUBSTR, GROUP BY, ORDER BY |
 |[☁️The Weather Observations Station](#weather-observation-station) | MOD, DISTINCT, COUNT, LENGTH, LIMIT, ORDER BYSUBST, LEFT, RIGHT |
+|[The Blunder]
 
 -------
 ### Average Population on Each Continent
@@ -182,4 +183,17 @@ SELECT DISTINCT City
 FROM Station
 WHERE City NOT LIKE '[aeiou]%'
     AND City NOT LIKE '%[aeiou]'
+```
+----
+### The Blunder
+Samantha was tasked with calculating the average monthly salaries for all employees in the EMPLOYEES table, but did not realize her keyboard's  key was broken until after completing the calculation. She wants your help finding the difference between her miscalculation (using salaries with any zeros removed), and the actual average salary.
+
+**Write a query calculating the amount of error (i.e.:  average monthly salaries), and round it up to the next integer.**
+
+The EMPLOYEES table is described as follows:
+![image](https://user-images.githubusercontent.com/113147940/199040661-5fbf87ad-37ba-4c12-ae9e-067077e47cff.png)
+
+```sql
+SELECT CEILING(AVG(Salary)-AVG(REPLACE(Salary, 0, '')))
+FROM Employees
 ```
