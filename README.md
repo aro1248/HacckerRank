@@ -195,6 +195,18 @@ FROM Station
 WHERE City NOT LIKE '[aeiou]%'
     AND City NOT LIKE '%[aeiou]'
 ```
+
+**Question 8:**
+Query the Western Longitude (LONG_W) for the largest Northern Latitude (LAT_N) in STATION that is less than 137.2345. Round your answer to  decimal places. 
+
+```sql
+SELECT FORMAT(LONG_W, 4)
+FROM STATION
+WHERE LAT_N = (
+    SELECT MAX(LAT_N)
+    FROM STATION
+    WHERE LAT_N < 137.2345)
+```
 ----
 ### The Blunder
 Samantha was tasked with calculating the average monthly salaries for all employees in the EMPLOYEES table, but did not realize her keyboard's 0 key was broken until after completing the calculation. She wants your help finding the difference between her miscalculation (using salaries with any zeros removed), and the actual average salary.
